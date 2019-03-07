@@ -114,6 +114,9 @@ typedef struct {
     char  ThumbnailAtEnd;              // Exif header ends with the thumbnail
                                        // (we can only modify the thumbnail if its at the end)
     int   ThumbnailSizeOffset;
+#ifdef STE_HARDWARE
+    int   ThumbnailHeight, ThumbnailWidth;
+#endif
 
     int  DateTimeOffsets[MAX_DATE_COPIES];
     int  numDateTimeTags;
